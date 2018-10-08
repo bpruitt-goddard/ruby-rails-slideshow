@@ -33,7 +33,8 @@ note:
 
 ## Ruby on Rails
 
-Here is info on it
+![RailsLogo](images/rails-logo.svg)
+*[The Official Ruby Logo](https://rubyonrails.org) by David Heinemeier Hansson is used with permission*
 
 note:
 * Notes
