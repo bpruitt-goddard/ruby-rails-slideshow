@@ -164,3 +164,7 @@ note:
 note:
 * If you have route and controller defined, view auto-hooks up to Model
 * Helper methods like `edit_game_path for finding the path
+
+---
+
+## Live Demo
