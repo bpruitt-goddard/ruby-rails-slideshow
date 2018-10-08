@@ -101,3 +101,21 @@ note:
 ## ORM/Data Access
 
 ActiveRecord ORM
+
+```ruby
+class Product < ApplicationRecord
+end
+...
+#Create
+product = Product.create(name: 'Board Game', price: 49.99)
+#Read/Query
+products = Product.all
+board_game = Product.find_by(name: 'Board Game')
+products = Product.where("price > ?", 25)
+#Delete
+board_game.destroy
+```
+
+note:
+* Convention Over Configuration - minimal work if you "play by the rules"
+* Create Product model with `Products` backend table
