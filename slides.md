@@ -26,7 +26,7 @@ note:
 
 --
 
-## Ruby Slide 2
+## Show Me Some Code!
 
 ```ruby
 # Say hi to everybody 
@@ -59,13 +59,45 @@ note:
 *[The Official Ruby Logo](https://rubyonrails.org) by David Heinemeier Hansson is used with permission*
 
 note:
-* Notes
+* Its an MVC-style Web Application framework that gives you everything to rapidly build a site
+* Convention over configuration - quicker setup
 
 --
 
-## Ruby on Rails Slide 1
+## What's In The Box?
 
-text
+* Web Server (duh)
+* Routing
+* Pre-configured Database/ORM
+* Web Pages written in ERuby (hmtl.erb) files
+* Scaffolding for fast development
 
 note:
-* Notes
+* Puma webserver, but is customizable like everything
+* Database is sqlite by default, also postgres, mysql
+
+--
+
+## Scaffolding/Generators
+
+* Scafolding - build everything
+```ruby
+rails generate scaffold Post name:string title:string content:text
+```
+* Generator - more focused building
+```ruby
+rails generate controller Greetings hello
+```
+
+note:
+* Creates Model, database migrations, unit test code, CRUD pages, controller 
+* Similar to .net MVC scaffolding in Visual Studio
+* Can use scaffolding to build a lot of stuff
+* Generator is used for finer grained stuff. Can customize/create your own.
+* This example creates a Greeting class with a hello method
+
+--
+
+## ORM/Data Access
+
+ActiveRecord ORM
