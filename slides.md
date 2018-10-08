@@ -5,7 +5,8 @@ A quick overview
 
 ## Ruby
 
-Text here
+![RubyLogo](images/ruby-logo-R.png)
+*[The Official Ruby Logo](https://www.ruby.or.jp/en/about/logo) by Ruby Association is used with permission*
 
 note:
 * I hope these notes work
