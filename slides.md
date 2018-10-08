@@ -120,13 +120,13 @@ note:
 * Convention Over Configuration - minimal work if you "play by the rules"
 * Create Product model with `Products` backend table
 
+--
+
 ## Database Migrations
 
-Migrations are similar to EntityFramework
 * Auto created for you with generator/scaffolding
 * Timestamped
 * Rake (Ruby Make) runs the migrations via `rake db:migrate`
-* Example:
 
 ```ruby
 class CreateBoardGames < ActiveRecord::Migration[5.0]
@@ -142,5 +142,25 @@ end
 ```
 
 note:
-* Very similar to EF
+* Very similar to EntityFramework
 * Rails Generator can be used to create migrations
+
+--
+
+## View/ERB Files
+
+```erb
+<% @board_games.each do |game| %>
+    <tr>
+    <td><%= game.name %></td>
+    <td><%= game.price %></td>
+    <td><%= link_to "Show", game %></td>
+    <td><%= link_to "Edit", edit_game_path(game) %></td>
+    <td><%= link_to "Destroy", game, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    </tr>
+<% end %>
+```
+
+note:
+* If you have route and controller defined, view auto-hooks up to Model
+* Helper methods like `edit_game_path for finding the path
