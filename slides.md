@@ -119,3 +119,28 @@ board_game.destroy
 note:
 * Convention Over Configuration - minimal work if you "play by the rules"
 * Create Product model with `Products` backend table
+
+## Database Migrations
+
+Migrations are similar to EntityFramework
+* Auto created for you with generator/scaffolding
+* Timestamped
+* Rake (Ruby Make) runs the migrations via `rake db:migrate`
+* Example:
+
+```ruby
+class CreateBoardGames < ActiveRecord::Migration[5.0]
+  def change
+    create_table :board_games do |t|
+      t.string :name
+      t.decimal :price
+ 
+      t.timestamps
+    end
+  end
+end
+```
+
+note:
+* Very similar to EF
+* Rails Generator can be used to create migrations
