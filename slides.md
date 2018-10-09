@@ -165,6 +165,54 @@ note:
 * If you have route and controller defined, view auto-hooks up to Model
 * Helper methods like `edit_game_path for finding the path
 
+--
+
+## Testing With Minitest
+
+```ruby
+require 'test_helper'
+ 
+class ProductTest < ActiveSupport::TestCase
+  test "product with name and price is valid" do
+    product = Product.new(name: 'Product', price: 1.99)
+    assert product.valid?
+  end
+  
+  test "should not save product without name" do
+    product = Product.new
+    assert_not product.save, "Saved the product without a title"
+  end
+end
+```
+
+note:
+* Rails comes with `Minitest` built in
+* Rails includes helpers for testing controllers and views (not shown)
+
+--
+
+## Test Data Using Fixtures
+
+```yml
+banana:
+  name: Banana 
+  price: 10
+pixel3:
+  name: Pixel3
+  price: 799
+# Insert 100 products
+<% 100.times do |n| %>
+product_<%= n %>:
+  username: <%= "product#{n}" %>
+  price: <%= n %>
+<% end %>
+```
+
+note:
+* Test data is in Fixture files for each model type
+* You can reference them by name in your tests
+* YAML files are pre-processed with ERB so you can use ruby to generate data
+
 ---
 
 ## Live Demo
