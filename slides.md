@@ -92,7 +92,6 @@ rails generate controller Greetings hello
 note:
 * Creates Model, database migrations, unit test code, CRUD pages, controller 
 * Similar to .net MVC scaffolding in Visual Studio
-* Can use scaffolding to build a lot of stuff
 * Generator is used for finer grained stuff. Can customize/create your own.
 * This example creates a Greeting class with a hello method
 
@@ -162,6 +161,7 @@ note:
 ```
 
 note:
+* Stored as `.erb.html` files
 * If you have route and controller defined, view auto-hooks up to Model
 * Helper methods like `edit_game_path for finding the path
 
