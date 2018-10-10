@@ -45,7 +45,7 @@ end
 
 say_hi nil
 say_hi "Brian"
-say_hi ["Brian", "Matt" ]
+say_hi ["Brian", "Matt"]
 ```
 
 note:
@@ -69,7 +69,7 @@ note:
 * Web Server (duh)
 * Routing
 * Pre-configured Database/ORM
-* Web Pages written in ERuby (hmtl.erb) files
+* Web Pages written in ERuby (html.erb) files
 * Scaffolding for fast development
 
 note:
@@ -80,7 +80,7 @@ note:
 
 ## Scaffolding/Generators
 
-* Scafolding - build everything
+* Scaffolding - build everything
 ```ruby
 rails generate scaffold Post name:string title:string content:text
 ```
@@ -128,9 +128,9 @@ note:
 * Rake (Ruby Make) runs the migrations via `rake db:migrate`
 
 ```ruby
-class CreateBoardGames < ActiveRecord::Migration[5.0]
+class CreateProducts < ActiveRecord::Migration[5.0]
   def change
-    create_table :board_games do |t|
+    create_table :products do |t|
       t.string :name
       t.decimal :price
  
@@ -149,21 +149,21 @@ note:
 ## View/ERB Files
 
 ```erb
-<% @board_games.each do |game| %>
+<% @products.each do |product| %>
     <tr>
-    <td><%= game.name %></td>
-    <td><%= game.price %></td>
-    <td><%= link_to "Show", game %></td>
-    <td><%= link_to "Edit", edit_game_path(game) %></td>
-    <td><%= link_to "Destroy", game, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    <td><%= product.name %></td>
+    <td><%= product.price %></td>
+    <td><%= link_to "Show", product %></td>
+    <td><%= link_to "Edit", edit_product_path(product) %></td>
+    <td><%= link_to "Destroy", product, method: :delete, data: { confirm: "Are you sure?" } %></td>
     </tr>
 <% end %>
 ```
 
 note:
-* Stored as `.erb.html` files
+* Stored as `.html.erb` files
 * If you have route and controller defined, view auto-hooks up to Model
-* Helper methods like `edit_game_path for finding the path
+* Helper methods like `edit_product_path for finding the path
 
 --
 
@@ -203,7 +203,7 @@ pixel3:
 # Insert 100 products
 <% 100.times do |n| %>
 product_<%= n %>:
-  username: <%= "product#{n}" %>
+  name: <%= "product#{n}" %>
   price: <%= n %>
 <% end %>
 ```
