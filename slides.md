@@ -215,4 +215,5 @@ note:
 
 ---
 
+<!-- .slide: data-background="http://i.giphy.com/EimNpKJpihLY4.gif" -->
 ## Live Demo
